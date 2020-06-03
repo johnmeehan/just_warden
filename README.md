@@ -1,24 +1,11 @@
-# README
+# Rails & Warden
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Using warden to protect a Rails API
 
-Things you may want to cover:
+A simple example of using just Warden without devise or any other complication for protecting a Rails API.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* a user can get a token by logging in.
+* the user then sends this token on the out going requests to the server as entry in the header as 'Access-Token'
+* Helper methods for protecting the API controllers and returning the `current_user`
+* Warden Strategies for checking the tokens.
+* another middleware for attaching the 'Access-Token' to some server responses. (handy if you want to change tokens regularly)
